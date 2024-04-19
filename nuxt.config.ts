@@ -1,6 +1,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/ui"],
+  colorMode: {
+    preference: "light",
+  },
   tailwindcss: {
     config: {
       theme: {
@@ -20,7 +23,7 @@ export default defineNuxtConfig({
               900: "#020A0A",
               950: "#000000",
             },
-            "secondary": {
+            secondary: {
               DEFAULT: "#0D595E",
               50: "#3EDAE4",
               100: "#2CD7E2",
