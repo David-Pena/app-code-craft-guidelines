@@ -1,13 +1,12 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxt/ui", "@nuxtjs/tailwindcss"],
+  modules: ["@nuxt/ui"],
   tailwindcss: {
     config: {
       theme: {
-        extends: {
+        extend: {
           colors: {
-            "custom-primary": {
+            "primary-color": {
               DEFAULT: "#2CB8C1",
               50: "#B6EBEE",
               100: "#A6E6EB",
