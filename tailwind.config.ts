@@ -1,4 +1,4 @@
-const animate = require("tailwindcss-animate")
+const animate = require("tailwindcss-animate");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -12,8 +12,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      rubik: ['Rubik', 'sans-serif'],
-      poppins: ['Poppins', 'sans-serif']
+      rubik: ["Rubik", "sans-serif"],
+      poppins: ["Poppins", "sans-serif"],
     },
     extend: {
       colors: {
@@ -58,4 +58,4 @@ module.exports = {
       },
     },
   },
-}
+};
