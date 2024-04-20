@@ -1,5 +1,8 @@
+<script setup lang="ts">
+const router = useRouter()
+router.push('/home')
+</script>
+
 <template>
-  <div class="h-screen flex justify-center items-center">
-    <UButton>Hello Wordl!</UButton>
-  </div>
+  <div></div>
 </template>
