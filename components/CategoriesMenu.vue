@@ -68,9 +68,21 @@ function handleMouseUp() {
 function handleMouseLeave() {
   if (activeDrag.value) {
     if (!tabMenu.value) return;
-    toggleActiveDrag()
+    toggleActiveDrag();
     tabMenu.value.classList.remove("dragging");
   }
+}
+
+function handleActiveItem(e: Event) {
+  const clickedItem = e.target as HTMLElement;
+  
+  if (!clickedItem.classList.contains("tab-btn")) return;
+  
+  const activeItem = document.querySelector(".tab-btn.active");
+  
+  if (activeItem) activeItem.classList.remove("active");
+  
+  clickedItem.classList.add("active");
 }
 
 onMounted(() => {
@@ -81,37 +93,23 @@ onMounted(() => {
 
 <template>
   <div>
-    <div class="tab-nav-bar">
-      <div class="tab-navigation">
-        <div ref="btnLeft" class="left-btn" @click="handleClickBtnLeft">
-          <UIcon name="i-heroicons-arrow-small-left-solid" />
-        </div>
-        <div ref="btnRight" class="right-btn" @click="handleClickBtnRight">
-          <UIcon name="i-heroicons-arrow-small-right-solid" />
-        </div>
-        <ul
-          ref="tabMenu"
-          class="tab-menu"
-          @mousemove="handleDrag"
-          @mousedown="toggleActiveDrag"
-          @mouseup="handleMouseUp"
-          @mouseleave="handleMouseLeave"
-        >
-          <li class="tab-btn active">React</li>
-          <li class="tab-btn">Nuxt</li>
-          <li class="tab-btn">Firebase</li>
-          <li class="tab-btn">Vue</li>
-          <li class="tab-btn">Next</li>
-          <li class="tab-btn">Supabase</li>
-          <li class="tab-btn">Prisma</li>
-          <li class="tab-btn">GCP</li>
-          <li class="tab-btn">GPT-4</li>
-          <li class="tab-btn">GPT-4</li>
-          <li class="tab-btn">GPT-4</li>
-          <li class="tab-btn">GPT-4</li>
-          <li class="tab-btn">GPT-4</li>
-        </ul>
+    <div class="tab-navigation">
+      <div ref="btnLeft" class="left-btn" @click="handleClickBtnLeft">
+        <UIcon name="i-heroicons-arrow-small-left-solid" />
       </div>
+      <div ref="btnRight" class="right-btn" @click="handleClickBtnRight">
+        <UIcon name="i-heroicons-arrow-small-right-solid" />
+      </div>
+      <ul
+        ref="tabMenu"
+        class="tab-menu"
+        @mousemove="handleDrag"
+        @mousedown="toggleActiveDrag"
+        @mouseup="handleMouseUp"
+        @mouseleave="handleMouseLeave"
+      >
+        <li v-for="(_, index) in 20" class="tab-btn" @click="handleActiveItem">Item. {{ index + 1 }}</li>
+      </ul>
     </div>
   </div>
 </template>
