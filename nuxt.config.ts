@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxt/ui"],
+  modules: ["@nuxt/ui", "nuxt-tiptap-editor"],
   colorMode: {
     preference: "light",
   },
@@ -9,8 +9,8 @@ export default defineNuxtConfig({
       theme: {
         extend: {
           fontFamily: {
-            poppins: ['Poppins', 'sans-serif'],
-            rubik: ['Rubik', 'sans-serif']
+            poppins: ["Poppins", "sans-serif"],
+            rubik: ["Rubik", "sans-serif"],
           },
           colors: {
             "primary-color": {
@@ -46,5 +46,8 @@ export default defineNuxtConfig({
       },
     },
   },
-  css: ["~/assets/css/main.css"]
+  tiptap: {
+    prefix: "Tiptap",
+  },
+  css: ["~/assets/css/main.css"],
 });

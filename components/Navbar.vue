@@ -11,7 +11,7 @@ useHead({
     </div>
 
     <div>
-      <UButton class="bg-transparent hover:bg-transparent text-base font-rubik">Sign In</UButton>
+      <UButton class="text-red-500-">Sign In</UButton>
     </div>
   </header>
 </template>
