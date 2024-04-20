@@ -1,5 +1,11 @@
 <template>
-  <div>
+  <UContainer>
     <NuxtPage />
-  </div>
+  </UContainer>
 </template>
+
+<style>
+body {
+  background-color: #121924;
+}
+</style>

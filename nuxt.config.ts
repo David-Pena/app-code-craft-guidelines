@@ -8,6 +8,10 @@ export default defineNuxtConfig({
     config: {
       theme: {
         extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            rubik: ['Rubik', 'sans-serif']
+          },
           colors: {
             "primary-color": {
               DEFAULT: "#2CB8C1",
@@ -42,4 +46,5 @@ export default defineNuxtConfig({
       },
     },
   },
+  css: ["~/assets/css/main.css"]
 });
