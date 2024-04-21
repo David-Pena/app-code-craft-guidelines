@@ -17,6 +17,8 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.11.4"
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@tailwindcss/typography": "^0.5.12",
+    "@tiptap/extension-placeholder": "^2.3.0"
   }
 }

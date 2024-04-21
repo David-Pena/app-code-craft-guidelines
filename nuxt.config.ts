@@ -42,8 +42,23 @@ export default defineNuxtConfig({
               950: "#000000",
             },
           },
+          typography: {
+            DEFAULT: {
+              css: {
+                h1: {
+                  "font-weight": 600,
+                },
+                li: {
+                  p: {
+                    margin: 0,
+                  },
+                },
+              },
+            },
+          },
         },
       },
+      plugins: [require("@tailwindcss/typography")],
     },
   },
   tiptap: {
